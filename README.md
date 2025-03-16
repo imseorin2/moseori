@@ -3,7 +3,7 @@
 안드로이드스튜디오에 Flutter 설치 후 
 Flutter로 간단한 "Hello World"를 출력하기   
 
-## 코드
+## 실행코드
 
 ```dart
 import 'package:flutter/material.dart';
