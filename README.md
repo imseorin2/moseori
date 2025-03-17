@@ -1,4 +1,4 @@
-#  Flutter 설치 후 구동
+# 1주차 Flutter 설치 후 구동
 
 안드로이드스튜디오에 Flutter 설치 후 
 Flutter로 간단한 "Hello World"를 출력하기   
@@ -25,3 +25,5 @@ void main() {
 
 ## 결과
 ![결과창](./ddfdkf.png)
+
+# 2주차
