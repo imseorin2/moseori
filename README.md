@@ -27,10 +27,10 @@ void main() {
 ![결과창](./ddfdkf.png)
 
 
-# 2주차 - Dart개념 및 실습
+# 2주차 - Dart
 
 Dart문법 학습하기 <br>
 [실습문제 풀어보기](https://docs.google.com/presentation/d/1aXllAnu3ZwwrJS9AMnVU6ud_vTI0keaCIOBQn-QEM64/edit#slide=id.g3335d87db6b_0_143)
 
 
-## 📖실습문제1 - 구구단
+## 😎실습문제1 - 구구단
