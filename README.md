@@ -132,3 +132,111 @@ setter
 
 ```
 
+# ▼ 3주차 - 실습 정리
+자기 소개 실습 <br>
+
+```dart
+class Person {
+  String name="";
+  int age =0;
+ 
+  void addOneYear() {
+age ++;
+  }
+}
+void main() {
+  var na=Person();
+  na.name='이서린';
+  na.age=22;
+  print([na.name, na.age]);
+}
+
+결과: [이서린, 22]
+
+▼
+class Person {
+  String _name="";
+  int _age =0;
+ 
+  Person(this._name, this._age);
+ 
+ 
+ 
+  void addOneYear() {
+    _age ++;
+  }
+ 
+  String get name => _name;
+  int get age => _age;
+}
+
+void main() {
+  var na=Person('이서린', 22);
+ 
+  print([na.name, na.age]);
+}
+
+
+결과: [이서린, 22]
+
+▼
+class Person {
+-> 클래스 필드 이름 앞에 _를 불티는 것은 다수의 언어에서 사용하는 스타일
+  String _name;
+  int _age;
+  String _desc;
+
+ 
+  Person(this._name, this._age, this._desc);
+ 
+ 
+ 
+  void addOneYear() {
+    _age ++;
+  }
+ 
+  String get name => _name;
+  int get age => _age;
+  String get desc => _desc;
+  set desc(String v) => _desc =v;
+}
+
+void main() {
+  var na=Person('이서린', 22, ' 이서린짱 ');
+ 
+  print([na.name, na.age, na.desc]);
+  na.addOneYear();
+  na.desc='아니다 이서린은 짱짱이다!';
+  print([na.name, na.age, na.desc]);
+}
+
+
+결과: [이서린, 22,  이서린짱 ]
+[이서린, 23, 아니다 이서린은 짱짱이다!]
+
+▼
+class Person {
+ 
+ 
+  String? name;
+  int? age;
+ 
+ 
+  Person({this.name, this.age});
+ 
+}
+ 
+
+void main() {
+   var p= Person(); -> 두 개 다 null 값
+ 
+  var p2= Person(name: '이서린');  -> name은 이서린 age는 null
+ 
+  var p3= Person(age : 22); -> name은 null age는 22
+ 
+  var p4= Person(name: '이서린', age: 22);
+}
+
+결과: x
+
+```
