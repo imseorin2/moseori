@@ -239,8 +239,127 @@ void main() {
 }
 
 결과: x
-
 ```
 
+# ▼ 3주차 - 실습 정리(2)
+
+
+```dart
+class Rectangle {
+-> 사각형을 왼쪽, 상단, 너비, 높이로 표현
+  num left, top, width, height;
+  Rectangle(this.left, this.top, this.width, this.height);
+
+-> 오른쪽, 하단은 필드를 생성하지 않고 get/set 으로 계산하여 표현
+  num get right => left + width;
+  set right(num value) => left= value - width;
+  num get bottom => top + height;
+  set bottomm(num value) => top = value - height;
+}
+ 
+
+void main() {
+  var r1=Rectangle(5, 10, 20, 25);
+  print([r1.left, r1.top, r1.width, r1.height]);
+  print([r1.width, r1.height]);
+}
+-> left, top, width, height <-> left, top, right, bottom
+
+결과: [5, 10, 20, 25]
+[20, 25]
+
+
+▼
+class Hero {
+  String name ='영웅';
+ 
+  void run() {
+print('뛴다');
+  }
+}
+  class SuperHero extends Hero {
+    @override
+    void run() {
+    super.run();
+    this.fly();
+    }
+   
+    void fly() {
+      print('난다!');
+    }
+  }
+
+void main() {
+  var hero= SuperHero();
+  hero.run();
+  print(hero.name);
+}
+
+
+결과: 뛴다
+난다!
+영웅
+
+
+▼
+abstract class Monster {
+  void attack();
+}
+  class Goblin implements Monster {
+    @override
+    void attack () {
+print('고블린 어택!');
+    }
+  }
+  class Bat implements Monster {
+   @override
+   void attack () {
+   print('할퀴기!');
+   }
+   }
+
+void main() {
+  Goblin g1 = Goblin();
+  Bat b1= Bat();
+  g1.attack();
+  b1.attack();
+ 
+ 
+  //monsters의 타입은?
+  List<Monster> monsters = [g1, b1];
+  monsters.forEach((m) => m.attack());
+ 
+}
+
+
+결과:
+고블린 어택!
+할퀴기!
+고블린 어택!
+할퀴기!
+
+▼
+enum Status { login, logout}
+
+void main() {
+var authStatus = Status.logout;
+  print(authStatus);
+
+   switch (authStatus) {
+     case Status.login:
+   print('로그인');
+   break;
+     case Status.logout:
+    print('로그아웃');
+   break;
+   
+   }}
+
+
+결과:
+Status.logout
+로그아웃
+
+```
 # ▼ 4주차 - 
 
