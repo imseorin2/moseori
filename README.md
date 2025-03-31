@@ -361,5 +361,97 @@ Status.logout
 로그아웃
 
 ```
+
+# ▼ 3주차 - 실습 정리(리스트)
+```dart
+▼
+void main() {
+  var l1 = [1, 2, 3, 4, 5, 6];
+  var l2 = ['가', '나', '다'];
+  print(l1);
+  print(l2);
+
+  l1.add(7);
+  print(l1);
+  l1.remove(2);
+  print(l1);
+
+  //나라의 수도를 표현할 때
+  var m1 = {'한국': '서울', '일본': '도쿄'};
+  print(m1);
+  print(m1['한국']);
+
+  //set (중복은 중복 표시가 되지 않고 한 번 만 표시됨)
+  var s1 = {1, 2, 3, 3, 3, 3, 4, 5};
+  // 3이 한개만 나옴
+  print(s1);
+  s1.add(6);
+  print(s1);
+  s1.add(6);
+  print(s1);
+}
+
+
+결과:
+[1, 2, 3, 4, 5, 6]
+[가, 나, 다]
+[1, 2, 3, 4, 5, 6, 7]
+[1, 3, 4, 5, 6, 7]
+{한국: 서울, 일본: 도쿄}
+서울
+{1, 2, 3, 4, 5}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+
+
+▼
+void main() {
+  var lottoNums = [5, 6, 11, 13, 17, 21];
+  lottoNums.forEach((num) {     ->forEach 문
+    print(num);
+  });
+}
+
+
+결과:
+5
+6
+11
+13
+17
+21
+
+
+▼
+void func_a() {
+  print('왼쪽!');
+}
+
+void func_b() {
+  print('오른쪽!');
+}
+
+void main() {
+  var fun = func_a;
+  fun();
+
+  fun = func_b;
+  fun();
+ 
+  var list =[1, 2, 3, 4, 5];
+  list.forEach((num) => print(num));
+ -> list.forEach(print) 로 코드를 간결하게 할 수 있음
+}
+
+
+결과:
+왼쪽!
+오른쪽!
+1
+2
+3
+4
+5
+```
 # ▼ 4주차 - 
 
