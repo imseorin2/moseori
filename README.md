@@ -453,5 +453,78 @@ void main() {
 4
 5
 ```
-# ▼ 4주차 - 
+# ▼ 4주차 - 과제
+실시간 시간 출력
+
+``` dart
+import 'package:flutter/material.dart';
+import 'dart:async'; // 타이머 사용
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: CurrentTimeApp(),
+    );
+  }
+}
+
+class CurrentTimeApp extends StatefulWidget {
+  @override
+  _CurrentTimeAppState createState() => _CurrentTimeAppState();
+}
+
+class _CurrentTimeAppState extends State<CurrentTimeApp> {
+  late String currentTime;
+
+  @override
+  void initState() {
+    super.initState();
+    currentTime = _getCurrentTime();
+    Timer.periodic(Duration(seconds: 1), (Timer timer) {
+      setState(() {
+        currentTime = _getCurrentTime();
+      });
+    });
+  }
+
+  String _getCurrentTime() {
+    final now = DateTime.now();
+    return '${now.year}-${_twoDigits(now.month)}-${_twoDigits(now.day)}'
+        '\n${now.hour > 12 ? '오전' : '오후'} '
+        '${_twoDigits(now.hour % 12 == 0 ? 12 : now.hour % 12)}:'
+        '${_twoDigits(now.minute)}:${_twoDigits(now.second)}';
+  }
+
+  String _twoDigits(int n) {
+    return n.toString().padLeft(2, '0');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('현재 시각'),
+        centerTitle: true,
+        backgroundColor: Colors.blueAccent,
+      ),
+      body: Center(
+        child: Text(
+          currentTime,
+          style: TextStyle(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+            color: Colors.lightBlue,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+```
 
