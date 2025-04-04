@@ -454,6 +454,8 @@ void main() {
 5
 ```
 # ▼ 4주차 - 과제
+[Flutter강의자료](https://docs.google.com/presentation/d/1_WUdaH1mP_ObZ_TiMxCTeB7aNkddJ1uiRHBE0V8nqVY/edit?slide=id.g33b3206563d_0_69#slide=id.g33b3206563d_0_69)
+
 실시간 시간 출력
 
 ``` dart
