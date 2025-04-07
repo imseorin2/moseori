@@ -530,3 +530,106 @@ class _CurrentTimeAppState extends State<CurrentTimeApp> {
 }
 ```
 
+# ▼ 5주차 - 수업 실습
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState(); // Define the createState method
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('제목'),
+        ),
+       /* body: Column(
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.blue,
+              child: Text('모도리'),
+
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.red,
+              child: Text('모도리'),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.green,
+              child: Text('모도리'),
+            ),
+          ],
+        )*/
+        body: Row(
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.blue,
+              child: Text('모도리'),
+
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.red,
+              child: Text('모도리'),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(16.0),
+              color: Colors.green,
+              child: Text('모도리'),
+            ),
+          ],
+        )
+    );
+  }
+}
+
+```
