@@ -791,7 +791,7 @@ class MyApp extends StatelessWidget {
 ```
 
 # ▼ 5주차 - 위젯과제(2)
-main.dart 코드
+
 ``` dart
 import 'package:flutter/material.dart';
 
@@ -821,75 +821,7 @@ class CalculatorScreen extends StatelessWidget {
     final buttonLabels = [
       '%', 'CE', 'C', '⌫',
       '⅟x', 'x²', '√x', '÷',
-      '7', '8', '9', '×',
-      '4', '5', '6', '−',
-      '1', '2', '3', '+',
-      '+/−', '0', '.', '='
-    ];
-
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            // 화면 상단 디스플레이
-            Expanded(
-              flex: 2,
-              child: Container(
-                padding: const EdgeInsets.all(16),
-                alignment: Alignment.bottomRight,
-                child: const Text(
-                  '0',
-                  style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            // 버튼 영역
-            Expanded(
-              flex: 5,
-              child: GridView.builder(
-                itemCount: buttonLabels.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  childAspectRatio: 1.2,
-                ),
-                itemBuilder: (context, index) {
-                  final label = buttonLabels[index];
-                  final isEquals = label == '=';
-
-                  return Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: isEquals ? Colors.lightBlue : Colors.grey[850],
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      onPressed: () {
-                        // TODO: 버튼 클릭 시 기능 구현
-                      },
-                      child: Text(
-                        label,
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                          color: isEquals ? Colors.black : Colors.white,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-# ▼ 5주차 - SWITCH 버튼 실습
+      '7', '8', '9'드
 ```dart
 import 'package:flutter/material.dart';
 import 'test_TextField.dart';
@@ -973,4 +905,33 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
+```
+test_TextField
+```dart
+import 'package:flutter/material.dart';
+
+class TestTextField extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('TextField 테스트')),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(),
+            SizedBox(height: 32),
+            TextField(decoration: InputDecoration(labelText: '여기에 입력하세요')),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: '여기도 입력하세요',
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 ```
