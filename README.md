@@ -1,4 +1,4 @@
-# 🐵Today I learned
+# 🐵Today I learned🐵
 # ▼ 1주차 Flutter 설치 후 구동
 
 안드로이드스튜디오에 Flutter 설치 후 
