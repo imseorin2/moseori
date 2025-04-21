@@ -1031,3 +1031,6 @@ I/flutter: FirstPage dispose()
 - 화면 전환은 `Navigator`의 `push()`와 `pop()` 메서드를 이용해 **Stack 구조**로 관리됩니다.
 
 ---
+
+
+# ▼ 7주차 - 실습 정리
