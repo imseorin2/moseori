@@ -1033,4 +1033,4 @@ I/flutter: FirstPage dispose()
 ---
 
 
-# ▼ 7주차 - 중간고사사
+# ▼ 7주차 - 중간고사
