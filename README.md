@@ -1064,7 +1064,7 @@ I/flutter: FirstPage dispose()
 더 많은 유연성과 생산성을 가져올 수 있습니다. 
 
 # ▼ 7주차 - 과제 (2)
-피피티 7장 코드
+피피티 7장 코드 (원본)
 
 ``` dart
 import 'package:flutter/material.dart';
