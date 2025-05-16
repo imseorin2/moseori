@@ -1314,4 +1314,5 @@ class Page3 extends StatelessWidget {
 # ▼9주차 - 수업정리
 ! 프로젝트 (기말시험) !
 주제선정
+- 어떤 형식이든 상관없이 계획서 작성
 
