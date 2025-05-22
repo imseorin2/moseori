@@ -57,7 +57,7 @@ void printDan(int dan) {
 
 ```
 
-## 실습문제2 - 사각형
+## 실습문제2 - 사각형 그리기
 
 ```dart
 void main() {
